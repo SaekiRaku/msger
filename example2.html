@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>■ Tag2</title>
+    <script src="msger.js"></script>
+</head>
+<body>
+    <audio id="music" controls src="testMusic2.mp3"></audio>
+
+    <script>
+        var obj = document.getElementById("music");
+
+        msger.init("2");
+        msger.on("play",function(){
+            obj.play();
+            document.title = "▶ Tag2";
+        });
+        msger.on("stop",function(){
+            obj.pause();
+            document.title = "■ Tag2";
+        });
+    </script>
+</body>
+</html>

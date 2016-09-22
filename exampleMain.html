@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Msger Example</title>
+    <script src="msger.js"></script>
+</head>
+<body>
+    <button onclick="play1();">Tag1 Play</button>
+    <button onclick="stop1();">Tag1 Stop</button><br /><br />
+    <button onclick="play2();">Tag2 Play</button>
+    <button onclick="stop2();">Tag2 Stop</button><br /><br />
+    <button onclick="playAll();">All Play</button>
+    <button onclick="stopAll();">All Stop</button>
+
+    <script>
+        msger.init("main");
+
+        function play1(){
+            msger.send("1","play");
+        }
+
+        function stop1(){
+            msger.send("1","stop");
+        }
+
+        function play2(){
+            msger.send("2","play");
+        }
+
+        function stop2(){
+            msger.send("2","stop");
+        }
+
+        function playAll(){
+            msger.broadcast("play");
+        }
+
+        function stopAll(){
+            msger.broadcast("stop");
+        }
+    </script>
+</body>
+</html>
